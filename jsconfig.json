@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "home/*": ["./src/modules/home/*"],
+      "src/*": ["./src/*"]
+    }
+  },
+  "exclude": ["dist", "node_modules"]
+}
