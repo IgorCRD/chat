@@ -1,6 +1,6 @@
 import React from 'react';
-import Message from 'message-list/components/message';
+import MessageListContainer from 'message-list/containers/message-list-container';
 
-const Home = () => <Message direction="out" authorPic="picture" text="Hello world" />;
+const Home = () => <MessageListContainer />;
 
 export default Home;

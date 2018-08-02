@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ReceivedMessage = ({ authorPic, text }) => <span>{`${authorPic} ${text}`}</span>;
+const ReceivedMessage = ({ authorPic, text }) => (
+  <div>
+    <span>{`${authorPic} ${text}`}</span>
+  </div>
+);
 
 ReceivedMessage.propTypes = {
   authorPic: PropTypes.string,
