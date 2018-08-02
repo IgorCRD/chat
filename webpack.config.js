@@ -12,6 +12,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      'message-list': path.resolve(__dirname, 'src/modules/message-list/'),
       home: path.resolve(__dirname, 'src/modules/home/'),
       assets: path.resolve(__dirname, 'assets/'),
       src: path.resolve(__dirname, 'src/'),
