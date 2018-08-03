@@ -12,6 +12,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      'chat-input': path.resolve(__dirname, 'src/modules/chat-input/'),
       'message-list': path.resolve(__dirname, 'src/modules/message-list/'),
       home: path.resolve(__dirname, 'src/modules/home/'),
       assets: path.resolve(__dirname, 'assets/'),

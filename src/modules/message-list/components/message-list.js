@@ -4,13 +4,17 @@ import PropTypes from 'prop-types';
 import Message from 'message-list/components/message';
 
 const MessageList = ({ messages }) => (
-  <React.Fragment>
-    {messages.map(({
+  <div>
+    <ul>
+      {messages.map(({
  key, authorPic, text, direction,
 }) => (
-  <Message key={key} authorPic={authorPic} text={text} direction={direction} />
-    ))}
-  </React.Fragment>
+  <li key={key}>
+    <Message authorPic={authorPic} text={text} direction={direction} />
+  </li>
+      ))}
+    </ul>
+  </div>
 );
 
 MessageList.propTypes = {
