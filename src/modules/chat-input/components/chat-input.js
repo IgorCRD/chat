@@ -1,21 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ChatInput = ({ value, onChangeValue, onSend }) => (
-  <div>
-    <input onChange={onChangeValue} value={value} />
-    <button onClick={onSend}>Send</button>
-  </div>
-);
+class ChatInput extends React.Component {
+  static propTypes = {
+    onChangeValue: PropTypes.func.isRequired,
+    onSend: PropTypes.func.isRequired,
+    value: PropTypes.string,
+  };
 
-ChatInput.propTypes = {
-  onChangeValue: PropTypes.func.isRequired,
-  onSend: PropTypes.func.isRequired,
-  value: PropTypes.string,
-};
+  static defaultProps = {
+    value: '',
+  };
 
-ChatInput.defaultProps = {
-  value: '',
-};
+  onKeyPressHandler = (event) => {
+    if (event.charCode !== 13) return;
+
+    const { onSend } = this.props;
+    onSend(event);
+  };
+
+  render() {
+    const { onChangeValue, value, onSend } = this.props;
+
+    return (
+      <div>
+        <input onChange={onChangeValue} value={value} onKeyPress={this.onKeyPressHandler} />
+        <button onClick={onSend}>Send</button>
+      </div>
+    );
+  }
+}
 
 export default ChatInput;
