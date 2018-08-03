@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 
 const SentMessage = ({ text }) => (
   <div>
-    <span>{`${text}`}</span>
+    <span>
+      {`${text}`}
+    </span>
   </div>
 );
 

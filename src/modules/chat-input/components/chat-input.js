@@ -25,7 +25,9 @@ class ChatInput extends React.Component {
     return (
       <div>
         <input onChange={onChangeValue} value={value} onKeyPress={this.onKeyPressHandler} />
-        <button onClick={onSend}>Send</button>
+        <button onClick={onSend} type="button">
+          Send
+        </button>
       </div>
     );
   }

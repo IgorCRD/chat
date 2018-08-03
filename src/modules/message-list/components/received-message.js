@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 const ReceivedMessage = ({ authorPic, text }) => (
   <div>
     <img src={authorPic} alt="sender profile pic" width="40px" height="40px" />
-    <span>{`${text}`}</span>
+    <span>
+      {`${text}`}
+    </span>
   </div>
 );
 

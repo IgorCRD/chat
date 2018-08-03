@@ -56,8 +56,12 @@ class ChatInputContainer extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  addMessage: (key, authorPic, text, direction) =>
-    dispatch(MessageListActions.addMessage(key, authorPic, text, direction)),
+  addMessage(key, authorPic, text, direction) {
+    dispatch(MessageListActions.addMessage(key, authorPic, text, direction));
+  },
 });
 
-export default connect(null, mapDispatchToProps)(ChatInputContainer);
+export default connect(
+  null,
+  mapDispatchToProps,
+)(ChatInputContainer);
