@@ -6,12 +6,7 @@ import Message from 'message-list/components/message';
 const MessageList = ({ messages }) => (
   <React.Fragment>
     <div>
-      {messages.length}
-      {' '}
-Online Requests
-      {messages.length}
-      {' '}
-Offline Requests
+      {`${messages.length} Online Requests ${messages.length} Offline Requests`}
     </div>
     <div>
       <ul>
